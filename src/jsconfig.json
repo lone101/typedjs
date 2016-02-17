@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "module": "commonjs",
+        "out" :"typedjs.js"
+    },
+    "files": [
+        "base/clases.js",
+        "base/initExtensions.js"
+    ]
+}

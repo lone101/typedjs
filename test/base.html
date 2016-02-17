@@ -1,0 +1,47 @@
+
+<html>
+<head><title></title>
+  <script src="../lib/jquery-1.8.2.js"></script>
+  <script src="../src/base/base.js"></script>
+  <script lang="javascript">
+    function test(){
+      debugger;
+      var componente={
+        eventHandlers:{},
+        Datos:{},
+        Metodos:{}
+      }
+      /*_.jobs.low().addProcess('prueba'
+      , function(){
+        return 2+2;
+      }
+      ,null
+      ,function(data){
+        debugger;
+        alert(data.process+':'+data.execution+':'+data.returned);
+      });*/
+      window.result= $('#results');
+      window.cc=new function(){
+        var mc=new _.base.class("cc",this);
+        mc.properties.set("ccaa",1,function(prop){
+          result.append('<p>cc.'+prop.name+'='+prop.get()+'</p>');
+        });
+        return mc.public;
+      }
+      window.he = new function(){
+        var me=cc.inherit("he",this);
+        me.properties.set("heaa",2,function(prop){
+          result.append('<p>he.'+prop.name+'='+prop.get()+'</p>');
+        });
+        return me.public;
+      }
+    }
+
+  </script>
+</head>
+<body onload="test();">
+<div id="results">
+
+</div>
+</body>
+</html>
